@@ -1,2 +1,2 @@
 # Penguin-Ascend
-Un pingüino se enloquese y asciende 
+Un pingüino se enloquece y asciende 
