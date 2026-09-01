@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dp74po7v1s244"]
+
+[ext_resource type="PackedScene" uid="uid://diska5cfg02tk" path="res://Assets/Models/Caminado.blend" id="1_foq83"]
+[ext_resource type="Script" uid="uid://df5oq7o15liad" path="res://Scripts/Penguin/penguin.gd" id="1_l8vk5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xp1gj"]
+radius = 0.3
+height = 1.1
+
+[node name="Penguin" type="CharacterBody3D" unique_id=1411875955]
+script = ExtResource("1_l8vk5")
+
+[node name="Caminado" parent="." unique_id=641547311 instance=ExtResource("1_foq83")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, -0.124551535)
+
+[node name="Skeleton3D" parent="Caminado/Armature" parent_id_path=PackedInt32Array(641547311, 548564958) index="0" unique_id=27378145]
+bones/0/position = Vector3(-3.5527137e-15, 0.084490165, 0.33710483)
+bones/0/rotation = Quaternion(-0.0045598634, 0.000218084, -0.047744174, 0.9988492)
+bones/1/rotation = Quaternion(-0.041740477, -4.381156e-09, -3.491394e-08, 0.9991285)
+bones/3/rotation = Quaternion(-0.04151811, 0.07066774, -0.4885516, 0.868677)
+bones/4/rotation = Quaternion(-0.058566816, 0.028338056, -0.07640389, 0.99495196)
+bones/6/rotation = Quaternion(-0.009348599, -0.015912618, 0.49011725, 0.8714611)
+bones/7/rotation = Quaternion(0.10660036, 0.05653288, 0.03937223, 0.9919124)
+bones/8/rotation = Quaternion(-0.0057117622, -0.12504233, 0.99213004, 0.003146558)
+bones/9/rotation = Quaternion(-0.2118023, -0.09356224, -0.00836179, 0.9727878)
+bones/10/rotation = Quaternion(0.9524033, 0.108680174, 0.055020034, 0.27944502)
+bones/11/rotation = Quaternion(0.00037737767, 0.12728947, 0.99186116, -0.0029410883)
+bones/12/rotation = Quaternion(-0.077391006, 0.00022946249, -0.0029563324, 0.99699646)
+bones/13/rotation = Quaternion(0.72301185, -0.04214914, -0.00074194337, 0.68954825)
+
+[node name="Bone_001" parent="Caminado/Armature/Skeleton3D" index="0" unique_id=647708960]
+transform = Transform3D(0.9954409, 0.094971515, 0.008823216, -0.0953805, 0.9911728, 0.0920812, -2.3996952e-07, -0.09250295, 0.99571234, 0.1082294, 1.2140298, 0.3267444)
+
+[node name="Bone" parent="Caminado/Armature/Skeleton3D" index="1" unique_id=313502235]
+transform = Transform3D(0.9954409, 0.09537645, 0.0008710797, -0.09538043, 0.99539936, 0.009088405, -2.52272e-07, -0.009130054, 0.9999583, -3.5527137e-15, 0.084490165, 0.33710483)
+
+[node name="Sphere_001" parent="Caminado/Armature/Skeleton3D" index="7" unique_id=1090749908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.021476105)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1078641800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+shape = SubResource("CapsuleShape3D_xp1gj")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1531367731]
+transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 3, 5)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=1833143901]
+
+[editable path="Caminado"]
