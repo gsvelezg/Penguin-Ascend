@@ -7,11 +7,15 @@ class_name Penguin
 @export var gravity : float = 9.8
 
 var direction : Vector3 = Vector3.ZERO
+var states_names:PenguinStatesNames = PenguinStatesNames.new() #Creamos un objeto de tipo PenStatesNames
 
 func _ready():
-	pass
+	for state in states_names.STATE_NAMES:
+		print(state)
 	
 func _physics_process(delta):
+	if velocity.length() >= 0.01:
+		$PinguWalk/AnimationPlayer.play("Walk")
 	direction = get_movement_input()
 	velocity.z = direction.z * walking_speed
 	velocity.x = direction.x * walking_speed
