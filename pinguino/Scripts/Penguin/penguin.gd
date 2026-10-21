@@ -7,11 +7,10 @@ class_name Penguin
 @export var gravity : float = 9.8
 
 var direction : Vector3 = Vector3.ZERO
-var states_names:PenguinStatesNames = PenguinStatesNames.new() #Creamos un objeto de tipo PenStatesNames
+var states_names:PenguinStateNames = PenguinStateNames.new() #Creamos un objeto de tipo PenStatesNames
 
 func _ready():
-	for state in states_names.STATE_NAMES:
-		print(state)
+	pass
 	
 func _physics_process(delta):
 	if velocity.length() >= 0.01:

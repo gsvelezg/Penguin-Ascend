@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://df5oq7o15liad" path="res://Scripts/Penguin/penguin.gd" id="1_l8vk5"]
 [ext_resource type="PackedScene" uid="uid://bdotujj3uaca2" path="res://Assets/Models/PinguWalk.blend" id="2_ulury"]
+[ext_resource type="Script" uid="uid://bjoqg8rmija46" path="res://Scripts/Classes/StateMachine.gd" id="3_ppxkg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xp1gj"]
 radius = 0.26
@@ -21,5 +22,8 @@ transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.939
 
 [node name="PinguWalk" parent="." unique_id=1736804776 instance=ExtResource("2_ulury")]
 transform = Transform3D(0.43, 0, 0, 0, 0.43, 0, 0, 0, 0.43, 0, 0, -0.2573576)
+
+[node name="StateMachine" type="Node" parent="." unique_id=311007888]
+script = ExtResource("3_ppxkg")
 
 [editable path="PinguWalk"]
